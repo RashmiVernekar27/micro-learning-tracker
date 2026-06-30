@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro-Learning Progress Tracker</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; margin: 40px; color: #333; }
+        h1 { color: #2c3e50; border-bottom: 2px solid #34495e; padding-bottom: 10px; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .module-list { list-style: none; padding: 0; }
+        .module-item { background: #fff; margin: 10px 0; padding: 15px; border-radius: 5px; display: flex; justify-content: space-between; border-left: 5px solid #3498db; }
+        .status { font-weight: bold; padding: 4px 8px; border-radius: 4px; }
+        .Completed { background-color: #2ecc71; color: white; }
+        .In-Progress { background-color: #f1c40f; color: black; }
+        .Not-Started { background-color: #95a5a6; color: white; }
+    </style>
+</head>
+<body>
+
+    <h1>🚀 Micro-Learning Progress Dashboard</h1>
+    
+    <div class="card">
+        <h3>Welcome back! Here is your current tracking status:</h3>
+        <ul class="module-list">
+            {% for module in modules %}
+            <li class="module-item">
+                <span><strong>{{ module.topic }}</strong></span>
+                <span class="status {{ module.status }}">{{ module.status }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</body>
+</html>
