@@ -30,6 +30,12 @@
             </li>
             {% endfor %}
         </ul>
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+            <h4>➕ Add a New Learning Module</h4>
+            <form action="/add" method="POST" style="display: flex; gap: 10px;">
+                 <input type="text" name="topic" placeholder="e.g., AWS S3 Integration" required style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                 <button type="submit" style="background-color: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold;">Add Module</button>
+            </form>
     </div>
 
 </body>
